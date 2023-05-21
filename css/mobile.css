@@ -1,0 +1,13 @@
+@media screen and (max-width: 576px) {
+  .my-nav {
+    flex-direction: column;
+  }
+  .my-nav > * {
+    justify-content: left;
+    padding-left: 20px;
+    border: none;
+  }
+  .certificate-web {
+    border-bottom: 2px solid #d6c08d;
+  }
+}

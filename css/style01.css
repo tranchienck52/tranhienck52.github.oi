@@ -1,0 +1,18 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+.container01 {
+  height: 100%;
+}
+.stt {
+  background-color: #6710f28c;
+}
+.stt {
+  display: inline-block;
+  background-color: #6710f28c;
+  border: 2px solid #2195f3ba;
+  border-radius: 100%;
+}
