@@ -1,3 +1,4 @@
+//-----THIẾT LẬP NÚT SUBMIT-----
 function handleSubmit() {
   // lấy giá trị của input email và chuyển sang in thường
   const emailValue = document.getElementById("email").value.toLocaleLowerCase();
@@ -24,35 +25,43 @@ function handleSubmit() {
   }
 }
 
+//Hiện nút View-more khi di chuyển chuột vào
 function handleOnMouseOver(element) {
   const viewMore = element.querySelector(".control-view");
   viewMore.style.display = "inline-block";
 }
 
+//Ẩn nút khi rời chuột ra
 function handleOnMouseOut(element) {
   const viewMore = element.querySelector(".control-view");
-  if (!viewMore.classList.value.includes("less-more")) {
+  if (!viewMore.classList.value.includes("view-less")) {
     viewMore.style.display = "none";
   }
 }
 
+// Hiển thị nội dung khi kich vào nút
 function handleViewMore(element) {
+  // Chọn vào phần tử cha
   const parentElement = element.closest(".parent");
+  // Chọn phần tử button
   const viewMore = parentElement.querySelector(".control-view");
+  // Chọn phần tất cả phần tử con cần ẩn
   const sectionContent = parentElement.querySelectorAll(".section-content");
 
+  // Hiển thị nội dung
   if (viewMore.classList.value.includes("view-more")) {
     sectionContent.forEach((element) => {
       element.style.display = "block";
     });
+    // chuyển nút view-more sang view-less
     viewMore.classList.remove("view-more");
-    viewMore.classList.add("less-more");
-    viewMore.innerHTML = "Less more";
+    viewMore.classList.add("view-less");
+    viewMore.innerHTML = "View less";
   } else {
     sectionContent.forEach((element) => {
       element.style.display = "none";
     });
-    viewMore.classList.remove("less-more");
+    viewMore.classList.remove("view-less");
     viewMore.classList.add("view-more");
     viewMore.innerHTML = "View more";
   }

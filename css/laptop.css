@@ -43,22 +43,12 @@ section > .container {
   background-size: cover;
   background-position: center;
 }
-.banner-title h1 {
+.banner-title {
   position: absolute;
   top: 10%;
-  color: white;
   left: 50%;
-  transform: translate(-50%, 44px);
-  font-size: 32px;
+  transform: translate(-50%, 40px);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.banner-title span {
-  position: absolute;
-  top: 12%;
-  color: rgba(255, 255, 255, 0.41);
-  left: 50%;
-  transform: translate(-50%, 86px);
-  font-size: 12px;
 }
 
 /*----- PHẦN NAV-BAR -----*/
